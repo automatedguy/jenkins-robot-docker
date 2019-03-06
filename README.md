@@ -30,10 +30,10 @@ The change in permssions made above requires the ec2-user to log out and back in
 
 ## Install Docker-compose
 
-The following commands download version 1.6.1 of docker-compose (the latest when this project was last updated), set ownership on the executable, move it to the ```/usr/local/bin``` directory, and modify its execution permissions.
+The following commands download version 1.23.2 of docker-compose (the latest when this project was last updated), set ownership on the executable, move it to the ```/usr/local/bin``` directory, and modify its execution permissions.
 
 ```
-curl -L https://github.com/docker/compose/releases/download/1.6.1/docker-compose-`uname -s`-`uname -m` > docker-compose 
+curl -L https://github.com/docker/compose/releases/download/1.23.2/docker-compose-`uname -s`-`uname -m` > docker-compose 
 sudo chown root docker-compose
 sudo mv docker-compose /usr/local/bin
 sudo chmod +x /usr/local/bin/docker-compose
@@ -47,17 +47,17 @@ The easiest way copy the project files to the EC2 instance is to use Git to clon
 
 Once Git is installed you can clone this project using the following command from the ec2-user home directory (```/home/ec2-user```):
 
-```sudo git clone https://github.com/CraigsTraining/jenkins-ec2-docker```
+```sudo git clone https://github.com/automatedguy/jenkins-robot-docker```
 
 This will clone the project files into:
 
-```/home/ec2-user/jenkins-ec2-docker```
+```/home/ec2-user/jenkins-robot-docker```
 
 ## Building the Jenkins Docker Image
 
 Before you run Jenkins for the first time you need to build the Docker image it will user. The first step navigate to the project folder using:
 
-```cd jenkins-ec2-docker/```
+```cd jenkins-robot-docker/```
 
 The run the following Docker commands:
 
@@ -107,16 +107,10 @@ When the build process is completed you can start your instance again using:
 
 The content in this repository is Open Source material released under the Apache 2.0 License. Please see the [LICENSE](LICENSE) file for full license details.
 
-# Disclaimer
-
-The code in this repository is not sponsored or supported by Cloudbees, Inc.
-
 # Authors and Contributors 
 
-* Author: [Craig Vitter](https://github.com/cvitter)
+Automatedguy .Inc
  
 # Questions, Feedback, Pull Requests Etc.
 
 If you have any questions, feedback, suggestions, etc. please submit them via issues or, even better, submit a Pull Request!
-
-

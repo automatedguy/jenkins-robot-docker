@@ -49,4 +49,3 @@ RUN rm -rf /usr/local/lib/python3.6/site-packages/pip* && \
         rm get-pip.py
 
 RUN pip3 install robotframework
-
