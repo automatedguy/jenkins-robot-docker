@@ -32,6 +32,7 @@ RUN apt-get install -y \
         tk-dev \
         wget
 
+
 # Copy sh script responsible for installing Python
 COPY installpython3.sh /root/tmp/installpython3.sh
 
@@ -41,4 +42,11 @@ RUN chmod +x /root/tmp/installpython3.sh; sync && \
         rm -rf /root/tmp/installpython3.sh && \
         ln -s /Python-3.6.1/python /usr/bin/python3
 
+# Install pip3 for Python 3.6.1
+RUN rm -rf /usr/local/lib/python3.6/site-packages/pip* && \
+        wget https://bootstrap.pypa.io/get-pip.py && \
+        python3 get-pip.py && \
+        rm get-pip.py
+
 RUN pip3 install robotframework
+

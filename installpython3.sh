@@ -5,4 +5,3 @@ cd Python-3.6.1
 ./configure
 make
 make altinstall
-
